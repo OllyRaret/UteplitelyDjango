@@ -1,0 +1,538 @@
+<?php include 'contact_form.txt'; ?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="utf-8">
+ <title>Утеплители по низким ценам</title>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="keywords" content="">
+ <meta name="description" content="Лучшие утеплители по низким ценам">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/hover-dropdown-menu.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/icons.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/revolution-slider.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/rs-plugin/css/settings.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/animate.min.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/owl/owl.carousel.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/owl/owl.theme.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/owl/owl.transitions.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/prettyPhoto.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/style.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/responsive.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/css/color.css">
+ <link rel="stylesheet" type="text/css" href="static/yteplit/jbcm/jquery.jbcallme.css">
+    
+</head>
+<body>
+
+ <header id="sticker" class="sticky-navigation fixed-i">
+  <div class="sticky-menu relative">
+   <div id="navigation" class="navbar navbar-default navbar-bg-light" role="navigation">
+    <div class="container">
+     <div class="row">
+      <div class="col-md-12">
+       <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand scroll" href="#home"><img class="site_logo" alt="Site Logo" src="static/yteplit/img/logo.jpg" style="width: 75px;"></a>
+       </div>
+       <div id="topnav" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+         <li><a href="#additional" class="scroll">Утеплители</a></li>
+         <li><a href="#sertifickat" class="scroll">Сертификаты</a></li>
+         <li><a href="#contact-us" class="scroll">Контакты</a></li>
+
+        {% if request.session.username %}
+        <li><span class="nav-link">Добро пожаловать, {{ request.session.username }}</span></li>
+        <li><a href="{% url 'logout' %}" class="nav-link">Выйти</a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}" class="nav-link">Вход</a></li>
+        {% endif %}
+
+         <li><a style="line-height: 1.5em; color: #222; font-size: 16px; text-transform: uppercase; text-align: right;"><span style="color: rgb(43, 37, 23); font-size: 14px; font-weight: bold;">Бесплатный звонок по России</span><br><span style="font-weight: bold; font-size: 20px;">8 904 060 82 00</span></a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </header>
+
+ <section class="slider" id="home">
+  <div class="tp-banner">
+   <ul>
+    <li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
+     <div class="elements">
+      <h2 class="tp-caption right skewtotop title white text-shadow bold" data-x="12" data-y="200" data-speed="1000" data-start="1700" data-easing="Power4.easeOut" data-endspeed="500" data-endeasing="Power1.easeIn">
+       <strong class="my-slider-text">Лучшие утеплители <br> с доставкой по всей России</strong>
+       <br/>
+       <button class="btn btn-default btn-lg callme_1b">Узнать стоимость</button>
+      </h2>
+     </div>
+     <img src="static/yteplit/img/sections/slider/slide1.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat"/>
+    </li>
+    <li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
+     <div class="elements">
+      <h2 class="tp-caption lft skewtotop title white text-shadow bold" data-x="12" data-y="200" data-speed="1000" data-start="1700" data-easing="Power4.easeOut" data-endspeed="500" data-endeasing="Power1.easeIn">
+       <strong class="my-slider-text">Утеплители <br> от надежного поставщика</strong>
+       <br/>
+       <button class="btn btn-default btn-lg callme_1b">Получить расчет</button>
+      </h2>
+     </div>
+     <img src="static/yteplit/img/sections/slider/slide2.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat"/>
+    </li>
+   </ul>
+   <div class="tp-bannertimer"></div>
+  </div>
+ </section>
+
+ <section id="call-to-action" class="page-section no-pad bg-color">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12 top-pad-40 bottom-pad-20 text-center white" data-animation="pulse">
+     <h3>Запрос звонка или уточнение стоимости утеплителя <a href="#" class="btn btn-transparent-black btn-lg animated fadeInDown visible callme_1b" style="margin-left: 40px">Узнать стоимость</a></h3>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section id="fun-factor" class="page-section">
+  <div class="image-bg content-in " data-background="img/01.png"></div>
+  <div class="container">
+   <div class="row white top-pad-20">
+    <div class="col-md-6" data-animation="fadeInLeft">
+     <h3 class="text-uppercase bottom-margin-10">Утеплители</b></h3>
+     <p>Наша компания предлагает широкий ассортимент утеплителей различных видов и производителей. Мы гарантируем высокое качество продукции и оперативную доставку в любой регион России. Наши специалисты всегда готовы предоставить консультацию по выбору утеплителя и помочь подобрать оптимальное решение для вашего проекта. Будем рады сотрудничеству с вами!     </p>
+     <a class="btn btn-default callme_1b" href="#">Запросить информацию</a>
+    </div>
+    <div class="col-md-6" data-animation="fadeInRight">
+     <div class="row text-center fact-counter white">
+      <div class="col-sm-4 col-md-4 bottom-xs-pad-30">
+       <img src="static/yteplit/img/sections/icons/dostavka.png">
+       <div class="count-number" data-count="2356"><span class="counter"></span></div>
+       <h5>Проданные утеплители за этот месяц</h5>
+      </div>
+      <div class="col-sm-4 col-md-4 bottom-xs-pad-30">
+       <img src="static/yteplit/img/sections/icons/postroeno.png">
+       <div class="count-number" data-count="119"><span class="counter"></span></div>
+       <h5>Производим утеплителей за месяц</h5>
+      </div>
+      <div class="col-sm-4 col-md-4 bottom-xs-pad-30">
+       <img src="static/yteplit/img/sections/icons/client.png">
+       <div class="count-number" data-count="25"><span class="counter"></span></div>
+       <h5>Разновидностей сертифицированных конструкции</h5>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section id="call-to-action-new-add" class="page-section no-pad bg-color">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12 top-pad-40 bottom-pad-20 text-center white" data-animation="pulse">
+     <h3>Остались вопросы? Звоните! <span style="text-decoration: underline;">8 904 060 82 00</span> Бесплатно по всей России.</h3>
+    </div>
+   </div>
+  </div>
+ </section>
+ <div class="section-title" data-animation="fadeInUp" id="sertifickat"><h2 class="title">Сертификаты</h2></div>
+ <div class="container">
+  <div class="row" data-animation="fadeInUp">
+   <div class="col-md-12 text-center">
+    <div class="owl-carousel pagination-1" data-pagination="false" data-items="6" data-autoplay="true" data-navigation="false">
+     <div class="boxed-block inline-block margin-10"><a href_="img/sections/cert/1.jpg" data-rel-no="prettyPhoto[sertificate]"><img src="static/yteplit/img/sections/cert/1.jpg" width="130" alt=""></a></div>
+     <div class="boxed-block inline-block margin-10"><a href_="img/sections/cert/2.jpg" data-rel-no="prettyPhoto[sertificate]"><img src="static/yteplit/img/sections/cert/2.jpg" width="130" alt=""></a></div>
+     <div class="boxed-block inline-block margin-10"><a href_="img/sections/cert/3.jpg" data-rel-no="prettyPhoto[sertificate]"><img src="static/yteplit/img/sections/cert/3.jpg" width="130" alt=""></a></div>
+     <div class="boxed-block inline-block margin-10"><a href_="img/sections/cert/4.jpg" data-rel-no="prettyPhoto[sertificate]"><img src="static/yteplit/img/sections/cert/4.jpg" width="130" alt=""></a></div>
+     <div class="boxed-block inline-block margin-10"><a href_="img/sections/cert/5.jpg" data-rel-no="prettyPhoto[sertificate]"><img src="static/yteplit/img/sections/cert/5.jpg" width="130" alt=""></a></div>
+     <div class="boxed-block inline-block margin-10"><a href_="img/sections/cert/6.jpg" data-rel-no="prettyPhoto[sertificate]"><img src="static/yteplit/img/sections/cert/6.jpg" width="130" alt=""></a></div>
+     <div class="boxed-block inline-block margin-10"><a href_="img/sections/cert/7.jpg" data-rel-no="prettyPhoto[sertificate]"><img src="static/yteplit/img/sections/cert/7.jpg" width="130" alt=""></a></div>
+     <div class="boxed-block inline-block margin-10"><a href_="img/sections/cert/8.jpg" data-rel-no="prettyPhoto[sertificate]"><img src="static/yteplit/img/sections/cert/8.jpg" width="130" alt=""></a></div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <section id="additional" class="page-section">
+  <div class="container">
+   <hr align="center" width="100%" size="1" color="#BDBDBD" />
+   <div class="row">
+    <div class="col-md-4 text-center bottom-xs-pad-30">
+        <div class="slider-not__img">
+            <img src="static/yteplit/img/sections/blocks/block01.jpg" style="overflow:hidden" width="280" height="440" alt=""/>
+            <img src="static/yteplit/img/sections/blocks/block01.jpg" class="slider-img__main" width="280" height="440" alt=""/>
+            <button class="btn btn-default btn-lg callme_2b" style="margin-top: -150px;">Узнать стоимость</button>
+        </div>
+    
+    </div>
+    <div class="col-md-8">
+     <div class="section-title text-left" data-animation="fadeInLeft"><h2 class="title">Утеплитель Техноакустик (уп 0,432 м3) 1200 х 600 х 100 мм</h2></div>
+     <div data-animation="fadeInUp"><p slyle="text-align: justify;">Плиты Техноакустик толщиной 100 мм изготавливаются из базальтовых волокон, обработанных синтетическим связующим с добавлением гидрофобизирующих присадок. Особое расположение волокон в этой каменной вате позволяет обеспечить высокий уровень поглощения акустических шумов. Плотность плит варьируется от 38 до 45 кг/м3. Негорючая звукоизоляция Техноакустик 100 мм может использоваться в учреждениях с повышенными пожарными требованиями.
+
+      Применять данный материал следует в ненагружаемых конструкциях. К ним относятся каркасно-обшивные перегородки и облицовки, подвесные потолки, перекрытия (в конструкциях с лагами). Применение утеплителя Техноакустик соответствует строительным нормам и требованиям пожарной безопасности.
+      
+      Для создания перегородок в помещениях рекомендовано использовать гипсокартонные листы. Их крепят на каркас из профилей и монтируют внутрь перегородки звукоизоляцию Техноакустик.</p></div>
+ 
+    </div>
+   </div>
+   <br/>
+   <hr align="center" width="100%" size="1" color="#BDBDBD" />
+   <div class="row">
+    <div class="col-md-4 text-center bottom-xs-pad-30">
+     <img src="static/yteplit/img/sections/blocks/block02.jpg" width="280" height="440" alt=""/>
+     <button class="btn btn-default btn-lg callme_3b" style="margin-top: -150px;">Узнать стоимость</button>
+    </div>
+    <div class="col-md-8">
+     <div class="section-title text-left" data-animation="fadeInLeft"><h2 class="title">Утеплитель Техноблок Стандарт 45 кг/м3 (1200х600х100 мм) (4 плиты)</h2></div>
+     <div data-animation="fadeInUp"><p slyle="text-align: justify;">ТЕХНОБЛОК 100 мм. – это негорючие, гидрофобизированные тепло-, звукоизоляционные плиты из минеральной ваты на основе горных пород базальтовой группы на низкофенольном связующем.</p></div>
+ 
+    </div>
+   </div>
+   <br/>
+   <hr align="center" width="100%" size="1" color="#BDBDBD" />
+   <div class="row">
+    <div class="col-md-4 text-center bottom-xs-pad-30">
+     <img src="static/yteplit/img/sections/blocks/block03.jpg" width="280" height="440" alt=""/>
+     <button class="btn btn-default btn-lg callme_4b" style="margin-top: -150px;">Узнать стоимость</button>
+    </div>
+    <div class="col-md-8">
+     <div class="section-title text-left" data-animation="fadeInLeft"><h2 class="title">Утеплитель Техноакустик (уп 0,432 м3) 1200 х 600 х 100 мм</h2></div>
+     <div data-animation="fadeInUp" ><p slyle="text-align: justify;">Плиты Техноакустик толщиной 100 мм изготавливаются из базальтовых волокон, обработанных синтетическим связующим с добавлением гидрофобизирующих присадок. Особое расположение волокон в этой каменной вате позволяет обеспечить высокий уровень поглощения акустических шумов. Плотность плит варьируется от 38 до 45 кг/м3. Негорючая звукоизоляция Техноакустик 100 мм может использоваться в учреждениях с повышенными пожарными требованиями.
+
+      Применять данный материал следует в ненагружаемых конструкциях. К ним относятся каркасно-обшивные перегородки и облицовки, подвесные потолки, перекрытия (в конструкциях с лагами). Применение утеплителя Техноакустик соответствует строительным нормам и требованиям пожарной безопасности.
+      
+      Для создания перегородок в помещениях рекомендовано использовать гипсокартонные листы. Их крепят на каркас из профилей и монтируют внутрь перегородки звукоизоляцию Техноакустик.</p></div>
+ 
+    </div>
+   </div>
+   <br/>
+   <hr align="center" width="100%" size="1" color="#BDBDBD" />
+   <div class="row">
+    <div class="col-md-4 text-center bottom-xs-pad-30">
+     <img src="static/yteplit/img/sections/blocks/block04.jpg" width="280" height="440" alt=""/>
+     <button class="btn btn-default btn-lg callme_5b" style="margin-top: -150px;">Узнать стоимость</button>
+    </div>
+    <div class="col-md-8">
+     <div class="section-title text-left" data-animation="fadeInLeft"><h2 class="title">Утеплитель Роклайт 35 кг/м3 (1200х600х100 мм) 6 плит</h2></div>
+     <div data-animation="fadeInUp" ><p slyle="text-align: justify;"> Роклайт — это легкие гидрофобизированные, негорючие теплозвукоизоляционные плиты из минеральной ваты на основе горных пород базальтовой группы. Это универсальный материал для частного строительства.
+
+     </br></br>
+      Область применения  </br>
+      Плиты РОКЛАЙТ предназанчены для тепло- и звукоизоляции следующих строительных конструкций: </br> </br>
+      
+      мансарды; </br>
+      скатные кровли; </br>
+      каркасные стены; </br>
+      стены с отделкой сайдингом; </br>
+      полы и межэтажные перекрытия по лагам; </br>
+      перегородки.</p></div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-4 text-center bottom-xs-pad-30">
+     <img src="static/yteplit/img/sections/blocks/block05.jpg" width="280" height="440" alt=""/>
+     <button class="btn btn-default btn-lg callme_5b" style="margin-top: -150px;">Узнать стоимость</button>
+    </div>
+    <div class="col-md-8">
+     <div class="section-title text-left" data-animation="fadeInLeft"><h2 class="title">Изорок Ультралайт 33 кг/м3 1200х600х100мм (0,288 м3/упак)</h2></div>
+     <div data-animation="fadeInUp" slyle=""><p slyle="text-align: justify;">Описание и преимущества </br>
+      Применение: в качестве ненагружаемой тепло-, звукоизоляции горизонтальных, вертикальных и наклонных строительных ограждающих конструкций всех типов зданий, в том числе: в трехслойной облегченной кладке (слоистой, колодцевой), каркасных стенах и перегородках, мансардах и межэтажных перекрытиях, во внутреннем слое вентилируемых фасадов.</div>
+ 
+    </div>
+   </div>
+   <hr align="center" width="100%" size="1" color="#BDBDBD" />
+   <div class="clearfix"></div>
+  </div>
+ </section>
+
+
+
+ <section id="contact-us" class="page-section">
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-6 col-md-8">
+     <div class="row">
+      <div class="col-sm-6 col-md-4" data-animation="fadeInLeft">
+        <h5 class="title"><i class="icon-map-pin text-color"></i> Адрес</h5>
+        <div>ул. Кораблестроителей, 29 корпус 2, Санкт-Петербург, 199397</div>
+      </div>
+      <div class="col-sm-6 col-md-4" data-animation="fadeInUp">
+       <h5 class="title"><i class="icon-phone10 text-color"></i> Телефон</h5>
+       <div>Отдел продаж : <span class="phone-target">8 904 060 82 00</span></div>
+      </div>
+      <div class="col-sm-6 col-md-4" data-animation="fadeInRight">
+       <h5 class="title"><i class="icon-envelope7 text-color"></i> Электронная почта</h5>
+       <div>E-mail : <a href="mailto:ruswebmeadia@bk.ru">ruswebmeadia@bk.ru</a></div>
+      </div>
+     </div>
+     <hr>
+     <p>Наша компания предлагает широкий ассортимент утеплителей различных видов и производителей. Мы гарантируем высокое качество продукции и оперативную доставку в любой регион России. Наши специалисты всегда готовы предоставить консультацию по выбору утеплителя и помочь подобрать оптимальное решение для вашего проекта. Будем рады сотрудничеству с вами!
+      
+      </p>
+    </div>
+    <div class="col-md-6 col-md-4" data-animation="fadeInUp">
+     <p class="form-message" style="display: none;"></p>
+    </div>
+   </div>
+   </div>
+ </section>
+
+ <section id="map" data-animation="fadeInUp">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679.9229588462808!2d30.219766393835435!3d59.952444886526344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963794a9a745b9%3A0x4ac948be3cb652a7!2z0JbQmiDQmtC-0YDQsNCx0LvQuA!5e0!3m2!1sru!2sru!4v1717512351637!5m2!1sru!2sru" width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+ <footer id="footer">
+  <div class="copyright" style="border-top: 0px solid #e1e1e1;">
+   <div class="container">
+    <div class="row">
+     <div class="col-xs-12 col-sm-6 col-md-6">
+      &copy; 2016, ООО «Стройинновации», 603014, г. Нижний Новгород, ул. Коминтерна, д. 39
+     </div>
+    </div>
+   </div>
+  </div>
+ </footer>
+
+</div>
+
+<script type="text/javascript" src="static/yteplit/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/yteplit/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/yteplit/js/hover-dropdown-menu.js"></script>
+<script type="text/javascript" src="static/yteplit/js/jquery.hover-dropdown-menu-addon.js"></script>
+<script type="text/javascript" src="static/yteplit/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="static/yteplit/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="static/yteplit/js/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="static/yteplit/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="static/yteplit/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="static/yteplit/js/revolution-custom.js"></script>
+<script type="text/javascript" src="static/yteplit/js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="static/yteplit/js/jquery.appear.js"></script>
+<script type="text/javascript" src="static/yteplit/js/effect.js"></script>
+<script type="text/javascript" src="static/yteplit/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="static/yteplit/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="static/yteplit/js/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="static/yteplit/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="static/yteplit/js/custom.js"></script>
+<script type="text/javascript" src="static/yteplit/jbcm/jquery.jbcallme.js"></script>
+<script type="text/javascript">
+ $(function() {
+  $('.callme_1b').jbcallme({
+   postfix: "order_1", 
+   no_submit: true, 
+   fields: {
+    name: {
+     required: true,
+     placeholder: "Ваше имя", 
+     type: "text",
+    },
+    tel: {
+     required: true,
+     placeholder: "Ваш телефон", 
+     type: "text",
+    },
+    email: {
+     required: true,
+     placeholder: "Ваш email", 
+     type: "email",
+    },
+    action: {
+     type: "hidden",
+     value: "order_1",
+    },
+    send: {
+     type: "submit",
+     value: "Отправить",
+    },
+   },
+   title: "Оставить заявку",
+   action_url: "/postmaster.php",
+  }); 
+ });
+</script>
+<script type="text/javascript">
+ $(function() {
+  $('.callme_2b').jbcallme({
+   postfix: "order_2", 
+   no_submit: true, 
+   fields: {
+    name: {
+     required: true,
+     placeholder: "Ваше имя", 
+     type: "text",
+    },
+    tel: {
+     required: true,
+     placeholder: "Ваш телефон", 
+     type: "text",
+    },
+    email: {
+     required: true,
+     placeholder: "Ваш email", 
+     type: "email",
+    },
+    message: {
+     required: true,
+     placeholder: "Комментарий", 
+     type: "text",
+    },
+    action: {
+     type: "hidden",
+     value: "order_2",
+    },
+    send: {
+     type: "submit",
+     value: "Отправить",
+    },
+   },
+   title: "Утеплитель Техноакустик (уп 0,432 м3) 1200 х 600 х 100 мм",
+   action_url: "/postmaster.php",
+  }); 
+ });
+</script>
+<script type="text/javascript">
+ $(function() {
+  $('.callme_3b').jbcallme({
+   postfix: "order_3", 
+   no_submit: true, 
+   fields: {
+    name: {
+     required: true,
+     placeholder: "Ваше имя", 
+     type: "text",
+    },
+    tel: {
+     required: true,
+     placeholder: "Ваш телефон", 
+     type: "text",
+    },
+    email: {
+     required: true,
+     placeholder: "Ваш email", 
+     type: "email",
+    },
+    message: {
+     required: true,
+     placeholder: "Комментарий", 
+     type: "text",
+    },
+    action: {
+     type: "hidden",
+     value: "order_3",
+    },
+    send: {
+     type: "submit",
+     value: "Отправить",
+    },
+   },
+   title: "Утеплитель Техноблок Стандарт 45 кг/м3 (1200х600х100 мм) (4 плиты)",
+   action_url: "/postmaster.php",
+  }); 
+ });
+</script>
+<script type="text/javascript">
+ $(function() {
+  $('.callme_4b').jbcallme({
+   postfix: "order_4", 
+   no_submit: true, 
+   fields: {
+    name: {
+     required: true,
+     placeholder: "Ваше имя", 
+     type: "text",
+    },
+    tel: {
+     required: true,
+     placeholder: "Ваш телефон", 
+     type: "text",
+    },
+    email: {
+     required: true,
+     placeholder: "Ваш email", 
+     type: "email",
+    },
+    message: {
+     required: true,
+     placeholder: "Комментарий", 
+     type: "text",
+    },
+    action: {
+     type: "hidden",
+     value: "order_4",
+    },
+    send: {
+     type: "submit",
+     value: "Отправить",
+    },
+   },
+   title: ">Утеплитель Техноакустик (уп 0,432 м3) 1200 х 600 х 100 мм",
+   action_url: "/postmaster.php",
+  }); 
+ });
+</script>
+<script type="text/javascript">
+ $(function() {
+  $('.callme_5b').jbcallme({
+   postfix: "order_5", 
+   no_submit: true, 
+   fields: {
+    name: {
+     required: true,
+     placeholder: "Ваше имя", 
+     type: "text",
+    },
+    tel: {
+     required: true,
+     placeholder: "Ваш телефон", 
+     type: "text",
+    },
+    email: {
+     required: true,
+     placeholder: "Ваш email", 
+     type: "email",
+    },
+    message: {
+     required: true,
+     placeholder: "Комментарий", 
+     type: "text",
+    },
+    action: {
+     type: "hidden",
+     value: "order_5",
+    },
+    send: {
+     type: "submit",
+     value: "Отправить",
+    },
+   },
+   title: "Изорок Ультралайт 33 кг/м3 1200х600х100мм (0,288 м3/упак)",
+   action_url: "/postmaster.php",
+  }); 
+ });
+</script>
+<script type="text/javascript">
+ $(function() {
+	$(document).ready(function(){
+		$('.jbCallme FORM.jb_form').on('submit', function() {
+			var goal = $(this).find('INPUT[name="action"]').val();
+			
+			if (goal) {
+				yaCounter46596609.reachGoal(goal);
+			}
+		});
+	});
+ });
+</script>
+
+
+</body>
+</html>
